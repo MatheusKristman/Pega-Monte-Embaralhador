@@ -1,0 +1,34 @@
+.header {
+  padding-top: 15px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    .logo {
+      height: 20px;
+      width: auto;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .try-again {    
+      background-color: #F45858;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-align: center;
+      
+      a {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #FFF;
+
+      }
+    }
+  }
+}
