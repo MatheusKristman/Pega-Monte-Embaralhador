@@ -5,33 +5,21 @@ function Container() {
   const [nameAdded, setNameAdded] = useState([]);
 
   const input = useRef();
-  const textarea = useRef();
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    function fetchTextareaNames(arr) {
-      if (textarea.current.value === '') {
-        arr.forEach((name) => (textarea.current.value += name + '\n'));
-      }
-    }
-
     function fetchNames() {
       let ArrBackup = JSON.parse(localStorage.getItem('names')) || [];
 
       setNameAdded(ArrBackup);
-      fetchTextareaNames(ArrBackup);
     }
 
     fetchNames();
   }, []);
 
-  function setTextInTextarea(arr) {
-    if (arr.length === 0) {
-      return;
-    }
-
-    textarea.current.value += arr[arr.length - 1] + '\n';
+  function alreadyHasText(arr, text) {
+    return arr.includes(text);
   }
 
   function addTextToArray() {
@@ -40,10 +28,16 @@ function Container() {
     }
 
     const arr = [...nameAdded];
+
+    if(alreadyHasText(arr, input.current.value)) {
+      alert('Nome já esta na lista!')
+      input.current.value = '';
+      return;
+    }
+
     arr.push(input.current.value);
     setNameAdded(arr);
     localStorage.setItem('names', JSON.stringify(arr));
-    setTextInTextarea(arr);
     input.current.value = '';
   }
 
@@ -85,7 +79,15 @@ function Container() {
   function resetNames() {
     setNameAdded([]);
     localStorage.setItem('names', JSON.stringify([]));
-    textarea.current.value = '';
+  }
+
+  function deleteNames(index) {
+    const arr = [...nameAdded];
+
+    arr.splice(index, 1);
+
+    setNameAdded(arr);
+    localStorage.setItem('names', JSON.stringify(arr));
   }
 
   return (
@@ -98,7 +100,16 @@ function Container() {
           </button>
         </div>
 
-        <textarea ref={textarea} readOnly className='hero-displayer' />
+        <div className='hero-displayer-test'>
+          {nameAdded.map((name, index) => (
+            <div className="hero-name-added" key={index}>
+              <span className="hero-name-added__text">{name}</span>
+              <button onClick={() => deleteNames(index)} className="hero-name-added__btn">
+                <i className="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          ))}
+        </div>
 
         <button onClick={saveShuffledArr} type='button' className='shuffle-btn'>
           Embaralhar
