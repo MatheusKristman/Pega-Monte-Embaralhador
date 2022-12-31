@@ -19,7 +19,7 @@ function Container() {
   }, []);
 
   function alreadyHasText(arr, text) {
-    return arr.includes(text);
+    return arr.includes(text.toLowerCase());
   }
 
   function addTextToArray() {
@@ -35,7 +35,7 @@ function Container() {
       return;
     }
 
-    arr.push(input.current.value);
+    arr.push(input.current.value.toLowerCase());
     setNameAdded(arr);
     localStorage.setItem('names', JSON.stringify(arr));
     input.current.value = '';
