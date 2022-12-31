@@ -14,7 +14,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 15px;
+      margin-bottom: 50px;
 
       span {
         font-size: 2rem;
@@ -43,10 +43,24 @@
       color: #fff;
     }
 
+    .previous-btn {
+      width: 100%;
+      padding: 15px 25px;
+      background-color: #faf6ef;
+      border: 2px solid #F45858;
+      border-radius: 6px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #F45858;
+      margin: 15px 0 0 0;
+    }
+
     .disabled {
       background-color: #faf6ef;
-      color: #F45858;
-      border: 2px solid #F45858;
+      color: #f45858c4;
+      border: 2px solid #F45858c4;
+      pointer-events: none;
     }
   }
 }

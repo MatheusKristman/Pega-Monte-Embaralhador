@@ -202,7 +202,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }
 .result__container .result-displayer span {
   font-size: 2rem;
@@ -227,8 +227,21 @@ body {
   font-weight: 700;
   color: #fff;
 }
+.result__container .previous-btn {
+  width: 100%;
+  padding: 15px 25px;
+  background-color: #faf6ef;
+  border: 2px solid #F45858;
+  border-radius: 6px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F45858;
+  margin: 15px 0 0 0;
+}
 .result__container .disabled {
   background-color: #faf6ef;
-  color: #F45858;
-  border: 2px solid #F45858;
+  color: rgba(244, 88, 88, 0.768627451);
+  border: 2px solid rgba(244, 88, 88, 0.768627451);
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
