@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: #faf6ef;
+  width: 100%;
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+}
+
+.wrapper {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding-top: 15px;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.header__container .logo {
+  height: 20px;
+  width: auto;
+}
+.header__container .logo img {
+  height: 100%;
+}
+.header__container .try-again {
+  background-color: #F45858;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+.header__container .try-again a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.hero {
+  margin-top: 50px;
+  height: calc(100vh - 35px);
+}
+.hero__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__container .input-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr;
+  margin-bottom: 15px;
+}
+.hero__container .input-wrapper input {
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid #F45858;
+  border-right: none;
+  background-color: #faf6ef;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+.hero__container .input-wrapper button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #F45858;
+  background-color: #F45858;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+.hero__container .hero-displayer {
+  width: 100%;
+  height: 160px;
+  padding-left: 10px;
+  padding-right: 10px;
+  resize: none;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F45858;
+  background-color: #faf6ef;
+  border: 2px solid #F45858;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 25px;
+}
+.hero__container .shuffle-btn {
+  width: 100%;
+  padding: 15px 25px;
+  border: none;
+  background-color: #F45858;
+  border-radius: 6px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  outline: none;
+  margin-bottom: 15px;
+}
+.hero__container .reset-btn {
+  width: 100%;
+  padding: 15px 25px;
+  border: none;
+  background-color: #faf6ef;
+  border: 2px solid #F45858;
+  border-radius: 6px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #F45858;
+  outline: none;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #F45858;
+}
+.footer__container {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__container .dev-link {
+  text-decoration: none;
+  outline: none;
+}
+.footer__container .dev-link .logo {
+  height: 30px;
+  width: auto;
+}
+.footer__container .social-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer__container .social-list .social-item a {
+  color: #faf6ef;
+  text-decoration: none;
+  font-size: 1.7rem;
+}
+
+.result {
+  margin-top: 50px;
+}
+.result__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result__container .result-displayer {
+  width: 100%;
+  height: 150px;
+  border: 2px solid #F45858;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.result__container .result-displayer span {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #F45858;
+}
+.result__container .result-displayer h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+}
+.result__container .start-btn {
+  width: 100%;
+  padding: 15px 25px;
+  background-color: #F45858;
+  border: none;
+  border-radius: 6px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.result__container .disabled {
+  background-color: #faf6ef;
+  color: #F45858;
+  border: 2px solid #F45858;
+}/*# sourceMappingURL=style.css.map */
