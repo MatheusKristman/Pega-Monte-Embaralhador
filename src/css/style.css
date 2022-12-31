@@ -93,6 +93,7 @@ body {
   color: #fff;
   font-size: 1rem;
   outline: none;
+  padding: 0;
 }
 .hero__container .hero-displayer {
   width: 100%;
